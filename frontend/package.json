@@ -1,0 +1,49 @@
+{
+  "name": "climate",
+  "version": "1.0.0",
+  "description": "climate dashboard of codeforkorea",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --check ./src",
+    "format:fix": "prettier --write ./src",
+    "dev": "webpack server --mode development --open --hot",
+    "build": "webpack --mode production",
+    "start": "webpack server --mode development --open --hot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/Code-for-Korea/climate.git)"
+  },
+  "keywords": [
+    "react",
+    "d3"
+  ],
+  "author": "jessi68",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/preset-typescript": "^7.16.7",
+    "@emotion/react": "^11.8.2",
+    "@types/react": "^17.0.43",
+    "@types/react-dom": "^17.0.14",
+    "babel-loader": "^8.2.4",
+    "css-loader": "^6.7.1",
+    "postcss-loader": "^6.2.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "webpack": "^5.70.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "autoprefixer": "^10.4.4",
+    "eslint": "^8.12.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "postcss": "^8.4.12",
+    "prettier": "2.6.1",
+    "tailwindcss": "^3.0.23",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
+  }
+}
