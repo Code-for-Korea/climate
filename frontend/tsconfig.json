@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
-  
-    "jsx": "react",
+    "jsx": "react-jsx",
     "module": "commonjs",      
     "baseUrl": "src",                          /* Specify what module code is generated. */
     "noImplicitAny": true,
@@ -17,11 +16,10 @@
     ],
      // Ensure that .d.ts files are created by tsc, but not .js files
     "declaration": true,
-    "emitDeclarationOnly": true,
     "isolatedModules": true,
     "allowJs": true,
     "esModuleInterop": true,
-    "strict": true,
+    "strict": false,
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
@@ -31,8 +29,10 @@
     "importHelpers": true
   },
   "include": [
-    "src"
-  ],
+    "public",
+    "src",
+   "index.tsx"  ,
+    "index.css"],
   "exclude": [
     "node_modules"
   ]

@@ -13,21 +13,29 @@ module.exports = {
   entry: {
     app: path.join(__dirname,  'index.tsx'),
   },
- 
+  output: {
+    filename: "bundle.js"
+},
+
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    extensions: ['', '.js', '.jsx', '.ts', '.tsx'],
   },
 
   module: {
     rules: [
+      // {
+      //   test: /\.(ts|tsx)?$/,
+      //   exclude: /(node_modules)/,
+      //   include: path.join(__dirname, '/src/'),
+      //   use: ['babel-loader']
+      // },
       {
-        test: /\.tsx?$/,
-        use: ['babel-loader'],
+        test: /\.css$/,
+        use: ["style-loader", "css-loader", "postcss-loader"],
       },
       {
-        test: /\.css$/i,
-        use: ["css-loader", "postcss-loader"],
-      },
+        test: /\.tsx?$/, loader: "ts-loader" 
+      }
     ],
   },
 
