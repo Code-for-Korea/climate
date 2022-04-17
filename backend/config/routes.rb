@@ -10,7 +10,7 @@ Rails.application.routes.draw do
       root to: "tools#index"
     end
 
-    resources :tools
+  resources :tools
   resources :data_sources
   resources :goals
   resources :documents
