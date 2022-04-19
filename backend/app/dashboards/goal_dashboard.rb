@@ -13,14 +13,14 @@ class GoalDashboard < Administrate::BaseDashboard
     depth: Field::String,
     detail: Field::Text,
     data_status: Field::String,
-    emission_2016: Field::String.with_options(searchable: false),
-    emission_2017: Field::String.with_options(searchable: false),
-    emission_2018: Field::String.with_options(searchable: false),
-    emission_2019: Field::String.with_options(searchable: false),
-    emission_2020: Field::String.with_options(searchable: false),
-    emission_2021: Field::String.with_options(searchable: false),
-    emission_2022: Field::String.with_options(searchable: false),
-    emission_goal_2030: Field::String.with_options(searchable: false),
+    emission_2016: Field::Number.with_options(searchable: false),
+    emission_2017: Field::Number.with_options(searchable: false),
+    emission_2018: Field::Number.with_options(searchable: false),
+    emission_2019: Field::Number.with_options(searchable: false),
+    emission_2020: Field::Number.with_options(searchable: false),
+    emission_2021: Field::Number.with_options(searchable: false),
+    emission_2022: Field::Number.with_options(searchable: false),
+    emission_goal_2030: Field::Number.with_options(searchable: false),
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -93,4 +93,8 @@ class GoalDashboard < Administrate::BaseDashboard
   # def display_resource(goal)
   #   "Goal ##{goal.id}"
   # end
+
+  def display_resource(goal)
+    "#{goal.title} (##{goal.id})"
+  end
 end

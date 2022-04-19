@@ -24,6 +24,18 @@ class ToolDashboard < Administrate::BaseDashboard
     indicator_goal_2030: Field::String.with_options(searchable: false),
     tool_data_status: Field::String,
     url: Field::Text,
+    data_sources: Field::HasMany.with_options(
+      searchable: true,
+      searchable_fields: ['title']
+    ),
+    policies: Field::HasMany.with_options(
+      searchable: true,
+      searchable_fields: ['title']
+    ),
+    stories: Field::HasMany.with_options(
+      searchable: true,
+      searchable_fields: ['title']
+    ),
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -82,6 +94,9 @@ class ToolDashboard < Administrate::BaseDashboard
     indicator_goal_2030
     tool_data_status
     url
+    data_sources
+    policies
+    stories
   ].freeze
 
   # COLLECTION_FILTERS

@@ -72,4 +72,8 @@ class PolicyDashboard < Administrate::BaseDashboard
   # def display_resource(policy)
   #   "Policy ##{policy.id}"
   # end
+
+  def display_resource(policy)
+    "#{policy.title} (##{policy.id})"
+  end
 end

@@ -72,4 +72,8 @@ class StoryDashboard < Administrate::BaseDashboard
   # def display_resource(story)
   #   "Story ##{story.id}"
   # end
+
+  def display_resource(story)
+    "#{story.title} (##{story.id})"
+  end
 end

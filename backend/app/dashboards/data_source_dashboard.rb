@@ -66,4 +66,8 @@ class DataSourceDashboard < Administrate::BaseDashboard
   # def display_resource(data_source)
   #   "DataSource ##{data_source.id}"
   # end
+
+  def display_resource(data_source)
+    "#{data_source.title} (##{data_source.id})"
+  end
 end

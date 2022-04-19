@@ -10,13 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_12_120125) do
+ActiveRecord::Schema[7.0].define(version: 2022_04_19_003039) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "data_sources", force: :cascade do |t|
     t.string "title"
     t.text "detail"
     t.text "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "data_sources_goals", force: :cascade do |t|
+    t.bigint "data_source_id"
+    t.bigint "goal_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["data_source_id"], name: "index_data_sources_goals_on_data_source_id"
+    t.index ["goal_id"], name: "index_data_sources_goals_on_goal_id"
+  end
+
+  create_table "data_sources_tools", force: :cascade do |t|
+    t.bigint "data_source_id"
+    t.bigint "tool_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["data_source_id"], name: "index_data_sources_tools_on_data_source_id"
+    t.index ["tool_id"], name: "index_data_sources_tools_on_tool_id"
   end
 
   create_table "documents", force: :cascade do |t|
@@ -55,6 +76,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_12_120125) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "policies_tools", force: :cascade do |t|
+    t.bigint "policy_id"
+    t.bigint "tool_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["policy_id"], name: "index_policies_tools_on_policy_id"
+    t.index ["tool_id"], name: "index_policies_tools_on_tool_id"
+  end
+
   create_table "stories", force: :cascade do |t|
     t.string "title"
     t.string "press"
@@ -63,6 +93,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_12_120125) do
     t.text "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "stories_tools", force: :cascade do |t|
+    t.bigint "story_id"
+    t.bigint "tool_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["story_id"], name: "index_stories_tools_on_story_id"
+    t.index ["tool_id"], name: "index_stories_tools_on_tool_id"
   end
 
   create_table "tools", force: :cascade do |t|

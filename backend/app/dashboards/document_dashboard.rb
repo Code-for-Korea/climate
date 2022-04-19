@@ -66,4 +66,8 @@ class DocumentDashboard < Administrate::BaseDashboard
   # def display_resource(document)
   #   "Document ##{document.id}"
   # end
+
+  def display_resource(document)
+    "#{document.title} (##{document.id})"
+  end
 end
