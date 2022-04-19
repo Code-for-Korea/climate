@@ -6,7 +6,7 @@ type Props = {
 }
 
 function DetailAreaBox({carbonDetailData}: Props)  {
-    return (<article className="w-48 h-32 border-dark-50">
+    return (<article className="w-48 h-32 border">
                 예시
             </article>)
 }
