@@ -12,6 +12,7 @@ class DocumentDashboard < Administrate::BaseDashboard
     id: Field::Number,
     title: Field::String,
     detail: Field::Text,
+    file: Field::ActiveStorage,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -35,6 +36,7 @@ class DocumentDashboard < Administrate::BaseDashboard
     id
     title
     detail
+    file
     created_at
     updated_at
   ].freeze
@@ -46,6 +48,7 @@ class DocumentDashboard < Administrate::BaseDashboard
     policy
     title
     detail
+    file
   ].freeze
 
   # COLLECTION_FILTERS
