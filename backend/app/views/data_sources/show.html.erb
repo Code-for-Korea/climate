@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @data_source %>
+
+<div>
+  <%= link_to "Edit this data source", edit_data_source_path(@data_source) %> |
+  <%= link_to "Back to data sources", data_sources_path %>
+
+  <%= button_to "Destroy this data source", @data_source, method: :delete %>
+</div>

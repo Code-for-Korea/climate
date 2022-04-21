@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Data sources</h1>
+
+<div id="data_sources">
+  <% @data_sources.each do |data_source| %>
+    <%= render data_source %>
+    <p>
+      <%= link_to "Show this data source", data_source %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New data source", new_data_source_path %>

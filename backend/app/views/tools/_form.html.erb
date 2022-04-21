@@ -1,0 +1,92 @@
+<%= form_with(model: tool) do |form| %>
+  <% if tool.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(tool.errors.count, "error") %> prohibited this tool from being saved:</h2>
+
+      <ul>
+        <% tool.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :goal_id, style: "display: block" %>
+    <%= form.text_field :goal_id %>
+  </div>
+
+  <div>
+    <%= form.label :detail, style: "display: block" %>
+    <%= form.text_area :detail %>
+  </div>
+
+  <div>
+    <%= form.label :key_indicator, style: "display: block" %>
+    <%= form.text_field :key_indicator %>
+  </div>
+
+  <div>
+    <%= form.label :key_indicator_unit, style: "display: block" %>
+    <%= form.text_field :key_indicator_unit %>
+  </div>
+
+  <div>
+    <%= form.label :indicator_2016, style: "display: block" %>
+    <%= form.text_field :indicator_2016 %>
+  </div>
+
+  <div>
+    <%= form.label :indicator_2017, style: "display: block" %>
+    <%= form.text_field :indicator_2017 %>
+  </div>
+
+  <div>
+    <%= form.label :indicator_2018, style: "display: block" %>
+    <%= form.text_field :indicator_2018 %>
+  </div>
+
+  <div>
+    <%= form.label :indicator_2019, style: "display: block" %>
+    <%= form.text_field :indicator_2019 %>
+  </div>
+
+  <div>
+    <%= form.label :indicator_2020, style: "display: block" %>
+    <%= form.text_field :indicator_2020 %>
+  </div>
+
+  <div>
+    <%= form.label :indicator_2021, style: "display: block" %>
+    <%= form.text_field :indicator_2021 %>
+  </div>
+
+  <div>
+    <%= form.label :indicator_2022, style: "display: block" %>
+    <%= form.text_field :indicator_2022 %>
+  </div>
+
+  <div>
+    <%= form.label :indicator_goal_2030, style: "display: block" %>
+    <%= form.text_field :indicator_goal_2030 %>
+  </div>
+
+  <div>
+    <%= form.label :tool_data_status, style: "display: block" %>
+    <%= form.text_field :tool_data_status %>
+  </div>
+
+  <div>
+    <%= form.label :url, style: "display: block" %>
+    <%= form.text_area :url %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

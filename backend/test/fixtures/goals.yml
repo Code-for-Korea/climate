@@ -1,0 +1,29 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  depth: MyString
+  detail: MyText
+  data_status: MyString
+  emission_2016: 9.99
+  emission_2017: 9.99
+  emission_2018: 9.99
+  emission_2019: 9.99
+  emission_2020: 9.99
+  emission_2021: 9.99
+  emission_2022: 9.99
+  emission_goal_2030: 9.99
+
+two:
+  title: MyString
+  depth: MyString
+  detail: MyText
+  data_status: MyString
+  emission_2016: 9.99
+  emission_2017: 9.99
+  emission_2018: 9.99
+  emission_2019: 9.99
+  emission_2020: 9.99
+  emission_2021: 9.99
+  emission_2022: 9.99
+  emission_goal_2030: 9.99
