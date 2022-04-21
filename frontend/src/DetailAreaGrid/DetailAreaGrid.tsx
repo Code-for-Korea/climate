@@ -3,16 +3,24 @@ import CarbonDetailData from "types/CarbonDetailData";
 import "../types/CarbonDetailData.ts"
 
 type Props = {
+    detailArea: string
     carbonDetailDatas: CarbonDetailData[]
 };
 
-function DetailAreaGrid({carbonDetailDatas}: Props) {
+function DetailAreaGrid({carbonDetailDatas, detailArea}: Props) {
     
-    return (<section className="grid grid-cols-3 gap-4">
+    return (
+        <div className="flex flex-col">
+            <div className="bg-gray-300 h-5 w-10 mb-2 text-center rounded-md">
+                <p className="text-sm">{detailArea}</p>
+            </div>
+         <section className="grid justify-items-center grid-cols-3 gap-4 ">
                 {carbonDetailDatas.map((carbonDetailData) => 
                     <DetailAreaBox carbonDetailData={carbonDetailData}></DetailAreaBox>
                 )}
-            </section>);
+            </section>
+        </div>
+   );
 }
 
 export default DetailAreaGrid;
