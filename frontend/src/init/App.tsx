@@ -8,17 +8,19 @@ function App() {
 
 
      metaData = [{
+         "targetEmissions": 2.7,
+         "solutionName": "제로에너지 건축",
          "detailArea": "건물"
      }, {
-        "detailArea": "탄소"
+         "targetEmissions": 2.7,
+         "solutionName": "그린모델링",
+        "detailArea": "건물"
     }, {
-        "detailArea": "소탄"
-    }, {
-        "detailArea": "탄소"
-    }, {
-        "detailArea": "탄소"
-    }
-
+        "targetEmissions": 2.7, 
+        "detailArea": "건물",
+        "solutionName":  "실시간 에너지 자동제어 시스템 도입",
+        "currentEmissions": 0.2
+    }, 
      ];
 
 
