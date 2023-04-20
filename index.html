@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="winter">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>탄소중립대시보드 - 코드포코리아</title>
+  <meta property="og:title" content="탄소중립대시보드 - 코드포코리아" />
+  <meta property="og:description" content="인터넷 시대와 함께 우리 곁에 찾아온 전자공보. 과연 시민들은 전자공보에 실린 정보를 쉽고 편하게 찾아볼 수 있을까요?" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://climate.codefor.kr/" />
+  <meta property="og:image" content="http://climate.codefor.kr/sns2.jpg" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.43.2/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .container {
+      max-width: 768px !important;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <section class="hero py-20 bg-base-200" style="background-image: url(bg_b.jpg)">
+      <div class="hero-content">
+        <div class="container mx-auto">
+          <h4 class="font-extrabold font-title text-2xl lg:text-3xl">코드포코리아</h4>
+          <h1 class="mb-2 font-extrabold font-title text-6xl lg:text-7xl">탄소중립대시보드</h1>
+          <p class="py-6">
+            설명이 들어갑니다
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </header>
+
+  <section class="sticky top-0 z-90 bg-base-300">
+    <div class="container mx-auto">
+      <div class="justify-between overflow-x-auto justify-items-stretch tabs tabs-boxed bg-base-300">
+        <a href="#results" class="tab link-neutral">평가 결과</a>
+        <a href="#map" class="tab link-neutral">공보 지도</a>
+        <a href="#data" class="tab link-neutral">데이터</a>
+        <a href="#insights" class="tab link-neutral">인사이트</a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section id="results" class="py-20 bg-secondary">
+      <div class="container mx-auto">
+        <h2 class="text-4xl font-bold mb-4 text-base-100">전환 부문 데이터</h2>
+      </div>
+    </section>
+
+    <section id="map" class="py-20">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-bold mb-4">공보 지도</h2>
+        <div class="bg-base-200 w-100 mb-10">
+          <iframe src="https://www.google.com/maps/d/embed?mid=1hwV-e3Xy6gRfTaz8jB4owsBRQHp8IOo&ehbc=2E312F" width="100%" height="480"></iframe>
+        </div>
+        <ul>
+          <li><span class="badge">0</span> 종합 점수/등급: 각 세부 평가를 종합한 결과입니다.</li>
+          <li><span class="badge">1</span> 상세목록 제공 여부: 조례, 고시, 공고 등 세부 정보의 목록을 제공하는지 알아봤습니다.</li>
+          <li><span class="badge">1.1</span> 상세목록의 제공 수준: 상세목록이 단순 1페이지인지, 각 항목이 데이터로 다뤄지는지 평가했습니다.</li>
+          <li><span class="badge">2</span> 제공 형식: PDF, HWPX, HWP 순서대로 높은 점수로 평가했습니다.</li>
+          <li><span class="badge">2.1</span> 파일 다운로드 가능 여부: 파일을 다운로드받을 수 있는지 확인했습니다.</li>
+          <li><span class="badge">2.2</span> 파일 내용을 문자로 복사할 수 있는지 여부: 첨부파일이 스캔한 그림인지, 문자인지 확인했습니다.</li>
+          <li><span class="badge">3</span> 최초 제공 호수: 최초로 제공된 전자공보의 제공호수입니다.</li>
+          <li><span class="badge">3.1</span> 최초 제공 날짜: 최초로 제공된 전자공보의 발행일입니다.</li>
+        </p>
+        <h3 class="text-2xl font-bold mt-10 mb-4">우수 사례</h3>
+        <p class="py-2">
+          <span class="badge badge-accent">우수사례 1</span>
+          <a href="https://www.busan.go.kr/news/gosiboard?articlNo=2" target="_blank" class="link link-accent">부산광역시 전자공보</a>는 공보 한 권을 통째로 PDF 파일로 올려놓지 않고,
+          공보의 항목별로 파일을 제공합니다.
+          게시물의 종류, 게재기관 등의 메타 정보를 함께 보여주고, 이러한 메타 정보로 검색할 수도 있습니다.
+        </p>
+        <p class="py-2">
+          <span class="badge badge-accent">우수사례 2</span>
+          <a href="https://www.namdong.go.kr/main/news/gazette.jsp" target="_blank" class="link link-accent">인천광역시 남동구 전자공보</a>는  공보 한 권을 PDF 파일로 그대로 올려놨습니다.
+          그러나 목차에서는 담당부서 등 메타 정보를 일부 보여주고 있고,
+          목차를 HTML Table 로 구조화해 제공하고 있습니다.
+        </p>
+
+        <h3 class="text-2xl font-bold mt-10 mb-4">아쉬운 사례</h3>
+        <p class="py-2">
+          <span class="badge badge-secondary">아쉬운 사례1</span>
+          <a href="https://www.yeoncheon.go.kr/ebook/ebookList.do?key=3617&Dir=0103000000&sort=rcode" target="_blank" class="link link-secondary">경기 연천군</a>,
+          <a href="https://www.wonju.go.kr/ecatalog/contents.do?key=4514&" target="_blank" class="link link-secondary">강원 원주시</a>,
+          <a href="https://www.seosan.go.kr/ebook/usr/ebookContentList.do?key=8290&gid=131230124334488&code=0A" target="_blank" class="link link-secondary">충남 서산시</a>
+          등은 전자관보를 E-BOOK으로만 제공하고 있습니다.
+          그런데 원본 파일을 다운로드할 수 없어 이용자 입장에서는 불편할 수밖에 없습니다.
+        </p>
+        <p class="py-2">
+          <span class="badge badge-secondary">아쉬운 사례2</span> 울산광역시 등 지방자치단체 11곳은 전자관보를 PDF 형태로 제공하고 있습니다.
+          그런데 PDF 내용은 종이관보를 스캔한 이미지로 되어 있습니다.
+          파일을 다운로드 받아도 키워드로 검색할 수 없어서 정보 확인과 공공 감시가 불편합니다.
+        </p>
+      </div>
+    </section>
+
+    <section id="data" class="py-20 bg-base-200">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-bold mb-4">공보현황목록 데이터</h2>
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTVKWvJhS68o9R5tG2Yoo-plsc4ARcDjKaJzw0sdjF563APpoDtsWSa7du3cj-7TEd6Qm0TqsnjIWEu/pubhtml?gid=295179219&amp;single=true&amp;widget=true&amp;headers=false" width="100%" height="400"></iframe>
+        <div class="mt-4">
+          <a href="https://docs.google.com/spreadsheets/d/1u6GV5vnne_bOL7Jqp3RykgKGbJ4_RxWUsSqwJlfaif8/edit#gid=295179219" target="_blank" class="link link-primary">데이터 보기</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="insights" class="py-20">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-bold mb-4">참여 섹션</h2>
+        <div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="bg-base-200">
+    <footer class="py-10 footer text-base-content container mx-auto">
+      <div class="">
+        <h5 class="text-2xl font-bold">
+          <a href="https://codefor.kr" target="_blank">코드포코리아 Code for Korea</a>
+        </h5>
+
+        <div>
+          <span class="footer-title">기여한 분들 (가나다 순)</span>
+          <p>
+            권오현 남반장 달로스 바른생활
+            벤지 오원석 유경민 이서준
+            이은수 클루 황서원
+          </p>
+        </div>
+
+        <div>
+          <span class="footer-title">프로젝트에 참여하는 방법</span>
+          <p>
+            <a href="https://code-for-korea.slack.com/join/shared_invite/zt-1agxnwk7r-XtjOFsUYTa0q3cIGecqGqQ#/shared-invite/email" target="_blank"> 코드포코리아 슬랙</a>에 가입한 후 <code>#p-진짜전자공보</code> 채널로 들어오세요</p>
+          </p>
+        </div>
+      </div>
+      <div>
+        <div>
+          <span class="footer-title mb-0">협력</span>
+          <h5 class="text-lg font-bold">
+            <a href="https://www.mois.go.kr/" target="_blank">행정안전부 공공데이터정책과</a>
+          </h5>
+          <h5 class="text-lg font-bold">
+            <a href="https://www.nia.or.kr/" target="_blank">NIA 공공데이터기획팀</a>
+          </h5>
+        </div>
+      </div>
+    </footer>
+  </section>
+  </body>
+</html>
